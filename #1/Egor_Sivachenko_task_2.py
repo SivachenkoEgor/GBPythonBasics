@@ -19,7 +19,7 @@ def is_div_by_seven(number):
     return result
 
 
-task_list = [i ** 3 for i in range(1, 1000 + 1)]
+task_list = [i ** 3 for i in range(1, 1000 + 1) if i % 2 == 1]
 result_1 = 0
 result_2 = 0
 for number in task_list:
@@ -36,8 +36,9 @@ result_2 = 0
 i = 1
 while i <= 1000:
     number = i ** 3
-    result_1 += is_div_by_seven(number)
-    result_2 += is_div_by_seven(number + 17)
+    if number % 2 == 1:
+        result_1 += is_div_by_seven(number)
+        result_2 += is_div_by_seven(number + 17)
     i += 1
 
 print(result_1)
