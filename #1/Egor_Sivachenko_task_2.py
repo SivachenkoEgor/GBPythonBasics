@@ -8,32 +8,37 @@
 
 
 # with list
+def is_div_by_seven(number):
+    result = 0
+    number_str = str(number)
+    digits_sum = 0
+    for inner_number in number_str:
+        digits_sum += int(inner_number)
+    if digits_sum % 7 == 0:
+        result += number
+    return result
 
 
 task_list = [i ** 3 for i in range(1, 1000 + 1)]
-result = 0
+result_1 = 0
+result_2 = 0
 for number in task_list:
-    number_str = str(number)
-    digits_sum = 0
-    for inner_number in number_str:
-        digits_sum += int(inner_number)
-    if digits_sum % 7 == 0:
-        result += number
-        print(number)
+    result_1 += is_div_by_seven(number)
+    result_2 += is_div_by_seven(number + 17)
 
-
-print(result)
+print(result_1)
+print(result_2)
 
 # with no list
 
-result = 0
+result_1 = 0
+result_2 = 0
 i = 1
 while i <= 1000:
     number = i ** 3
-    number_str = str(number)
-    digits_sum = 0
-    for inner_number in number_str:
-        digits_sum += int(inner_number)
-    if digits_sum % 7 == 0:
-        result += number
+    result_1 += is_div_by_seven(number)
+    result_2 += is_div_by_seven(number + 17)
     i += 1
+
+print(result_1)
+print(result_2)
