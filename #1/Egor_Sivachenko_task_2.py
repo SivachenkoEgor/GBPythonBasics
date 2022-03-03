@@ -8,7 +8,7 @@
 
 
 # with list
-def is_div_by_seven(number):
+def is_div_by_seven_with_str(number):
     result = 0
     number_str = str(number)
     digits_sum = 0
@@ -17,6 +17,17 @@ def is_div_by_seven(number):
     if digits_sum % 7 == 0:
         result += number
     return result
+
+def is_div_by_seven(number):
+    result = 0
+    temp = number
+    while temp > 0:
+        result += temp % 10
+        temp //= 10
+    if result % 7 == 0:
+        result = number
+    return result
+
 
 
 task_list = [i ** 3 for i in range(1, 1000 + 1) if i % 2 == 1]
