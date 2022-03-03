@@ -7,7 +7,7 @@
 # * Решить задачу под пунктом b, не создавая новый список.
 
 
-# with list
+
 def is_div_by_seven_with_str(number):
     result = 0
     number_str = str(number)
@@ -28,7 +28,7 @@ def is_div_by_seven(number):
         result = number
     return result
 
-
+# with list
 
 task_list = [i ** 3 for i in range(1, 1000 + 1) if i % 2 == 1]
 result_1 = 0
