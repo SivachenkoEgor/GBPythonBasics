@@ -21,8 +21,9 @@ new_list = list(reversed(first_list)) # создание нового списк
 print(new_list) # печать нового списка
 new_id_check = id(new_list) # id нового списка
 print(second_id_check == new_id_check) # >>> false
-print(first_list[-5:]) # 5 самых дорогих товаров
 print(new_list[:5]) # 5 самых дорогих товаров на стероидах
+print(first_list[-5:]) # 5 самых дорогих товаров
+
 
 
 
