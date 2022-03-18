@@ -11,18 +11,30 @@
 import random
 
 first_list = ["{:.2f}".format(random.uniform(10, 100)) for i in range(20)] # создание форматированного списка
-print(first_list) # печать исходного списка
-first_id_check = id(first_list) # id на момент создания
-first_list.sort() # сортировка без создания нового списка
-print(first_list) # печать сортированного списка
-second_id_check = id(first_list) # id сортированного списка
-print(first_id_check == second_id_check) # >>> true
-new_list = list(reversed(first_list)) # создание нового списка
-print(new_list) # печать нового списка
-new_id_check = id(new_list) # id нового списка
-print(second_id_check == new_id_check) # >>> false
-print(new_list[:5]) # 5 самых дорогих товаров на стероидах
-print(first_list[-5:]) # 5 самых дорогих товаров
+print(first_list)
+# печать исходного списка
+first_id_check = id(first_list)
+# id на момент создания
+first_list.sort()
+# сортировка без создания нового списка
+print(first_list)
+# печать сортированного списка
+second_id_check = id(first_list)
+# id сортированного списка
+print(first_id_check == second_id_check)
+# >>> true
+new_list = list(reversed(first_list))
+# создание нового списка
+print(new_list)
+# печать нового списка
+new_id_check = id(new_list)
+# id нового списка
+print(second_id_check == new_id_check)
+# >>> false
+print(new_list[:5])
+# 5 самых дорогих товаров
+print(first_list[-5:])
+# 5 самых дорогих товаров на стероидах
 
 
 
