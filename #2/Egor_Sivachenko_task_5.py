@@ -13,6 +13,11 @@ import random
 first_list = ["{:.2f}".format(random.uniform(10, 100)) for i in range(20)] # создание форматированного списка
 print(first_list)
 # печать исходного списка
+
+for i in first_list:
+    print("{:0.0f}".format(float(i)) + " руб " + i[-2:] + " коп")
+# форматированный вывод
+
 first_id_check = id(first_list)
 # id на момент создания
 first_list.sort()
